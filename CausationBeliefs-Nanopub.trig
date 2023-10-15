@@ -1,0 +1,1356 @@
+@prefix data: <http://anonymous.org/data/> .
+@prefix vocab: <http://anonymous.org/vocab/> .
+@prefix nanopub: <http://www.nanopub.org/nschema#> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+##############################################################
+# NANOPUBLICATIONS FOR THE CAUSATION BELIEFS
+##############################################################
+
+data:CBAspirinGIB_head {
+	  data:CBAspirinGIB_nanopub
+        a                             nanopub:Nanopublication ;
+        nanopub:hasAssertion          data:CBAspirinGIB ;
+        nanopub:hasProvenance         data:CBAspirinGIB_provenance ;
+		    nanopub:hasPublicationInfo    data:CBAspirinGIB_publicationinfo .
+}
+
+data:CBAspirinGIB {
+    data:ActAdministerAspirin
+        vocab:causes                  data:TrIncreaseRiskGIB .
+    data:CBAspirinGIB
+        a                             vocab:CausationBelief ;
+        vocab:strength                "L1"^^xsd:string;
+        vocab:frequency               "always"^^xsd:string.
+}
+
+data:CBAspirinGIB_provenance {
+    data:CBAspirinGIB_provenance
+        a                             oa:Annotation ;
+        oa:hasBody                    data:CBAspirinGIB ;
+        oa:hasTarget                  [ oa:hasSource <http://hdl.handle.net/10222/43703> ] .
+    data:CBAspirinGIB
+        prov:wasDerivedFrom           <http://hdl.handle.net/10222/43703> .
+}
+
+data:CBAspirinGIB_publicationinfo {
+    data:CBAspirinGIB_nanopub
+        prov:generatedAtTime          "2015-10-01"^^xsd:dateTime ;
+		    prov:wasAttributedTo          data:Veruska.
+}
+
+##############################################################
+# Josip addition - Aspirin vascular event
+# defined new transition: TrDecreaseRiskVascularEvent
+data:CBAspirinVascularEvent_head {
+	  data:CBAspirinVascularEvent_nanopub
+        a                             nanopub:Nanopublication ;
+        nanopub:hasAssertion          data:CBAspirinVascularEvent ;
+        nanopub:hasProvenance         data:CBAspirinVascularEvent_provenance ;
+		    nanopub:hasPublicationInfo    data:CBAspirinVascularEvent_publicationinfo .
+}
+
+data:CBAspirinVascularEvent {
+    data:ActAdministerAspirin
+        vocab:causes                  data:TrDecreaseMediumRiskVascularEvent .
+    data:CBAspirinVascularEvent
+        a                             vocab:CausationBelief ;
+        vocab:strength                "L1"^^xsd:string;
+        vocab:frequency               "always"^^xsd:string.
+}
+
+data:CBAspirinVascularEvent_provenance {
+    data:CBAspirinVascularEvent_provenance
+        a                             oa:Annotation ;
+        oa:hasBody                    data:CBAspirinVascularEvent ;
+        oa:hasTarget                  [ oa:hasSource <https://pubmed.ncbi.nlm.nih.gov/22195153/> ] .
+    data:CBAspirinVascularEvent
+        prov:wasDerivedFrom           <https://pubmed.ncbi.nlm.nih.gov/22195153/> .
+}
+
+data:CBAspirinVascularEvent_publicationinfo {
+    data:CBAspirinVascularEvent_nanopub
+        prov:generatedAtTime          "2015-10-01"^^xsd:dateTime ;
+		    prov:wasAttributedTo          data:Veruska.
+}
+
+
+##############################################################
+# Josip addition - PPI
+# defined new transition: TrHealingUlcer
+data:CBPPIDU_head {
+	  data:CBPPIDU_nanopub
+        a                             nanopub:Nanopublication ;
+        nanopub:hasAssertion          data:CBPPIDU ;
+        nanopub:hasProvenance         data:CBPPIDU_provenance ;
+		    nanopub:hasPublicationInfo    data:CBPPIDU_publicationinfo .
+}
+
+data:CBPPIDU {
+    data:ActAdministerPPI
+        vocab:causes                  data:TrHealingUlcer .
+    data:CBPPIDU
+        a                             vocab:CausationBelief ;
+        vocab:strength                "L1"^^xsd:string;
+        vocab:frequency               "always"^^xsd:string.
+}
+
+data:CBPPIDU_provenance {
+    data:CBPPIDU_provenance
+        a                             oa:Annotation ;
+        oa:hasBody                    data:CBPPIDU ;
+        oa:hasTarget                  [ oa:hasSource <https://pubmed.ncbi.nlm.nih.gov/22195153/> ] .
+    data:CBPPIDU
+        prov:wasDerivedFrom           <https://pubmed.ncbi.nlm.nih.gov/22195153/> .
+}
+
+data:CBPPIDU_publicationinfo {
+    data:CBPPIDU_nanopub
+        prov:generatedAtTime          "2015-10-01"^^xsd:dateTime ;
+		    prov:wasAttributedTo          data:Veruska.
+}
+
+
+##############################################################
+# Josip addition - PPI
+# defined new transition: TrDecreaseRiskGIB
+data:CBPPIGIB_head {
+	  data:CBPPIGIB_nanopub
+        a                             nanopub:Nanopublication ;
+        nanopub:hasAssertion          data:CBPPIGIB ;
+        nanopub:hasProvenance         data:CBPPIGIB_provenance ;
+		    nanopub:hasPublicationInfo    data:CBPPIGIB_publicationinfo .
+}
+
+data:CBPPIGIB {
+    data:ActAdministerPPI
+        vocab:causes                  data:TrDecreaseRiskGIB .
+    data:CBPPIGIB
+        a                             vocab:CausationBelief ;
+        vocab:strength                "L1"^^xsd:string;
+        vocab:frequency               "always"^^xsd:string.
+}
+
+data:CBPPIGIB_provenance {
+    data:CBPPIGIB_provenance
+        a                             oa:Annotation ;
+        oa:hasBody                    data:CBPPIGIB ;
+        oa:hasTarget                  [ oa:hasSource <https://pubmed.ncbi.nlm.nih.gov/22195153/> ] .
+    data:CBPPIGIB
+        prov:wasDerivedFrom           <https://pubmed.ncbi.nlm.nih.gov/22195153/> .
+}
+
+data:CBPPIGIB_publicationinfo {
+    data:CBPPIGIB_nanopub
+        prov:generatedAtTime          "2015-10-01"^^xsd:dateTime ;
+		    prov:wasAttributedTo          data:Veruska.
+}
+
+
+##############################################################
+
+data:CBNSAIDCoagulation_head {
+	  data:CBNSAIDCoagulation_nanopub
+        a                             nanopub:Nanopublication ;
+        nanopub:hasAssertion          data:CBNSAIDCoagulation ;
+        nanopub:hasProvenance         data:CBNSAIDCoagulation_provenance ;
+		    nanopub:hasPublicationInfo    data:CBNSAIDCoagulation_publicationinfo .
+}
+
+data:CBNSAIDCoagulation {
+    data:ActAdministerNSAID
+				vocab:causes 									data:TrDecreaseBC .
+    data:CBNSAIDCoagulation
+        a                             vocab:CausationBelief ;
+        vocab:strength                "L1"^^xsd:string;
+        vocab:frequency               "always"^^xsd:string.
+}
+
+data:CBNSAIDCoagulation_provenance {
+    data:CBNSAIDCoagulation_provenance
+        a                             oa:Annotation ;
+        oa:hasBody                    data:CBNSAIDCoagulation ;
+        oa:hasTarget                  [ oa:hasSource <http://hdl.handle.net/10222/43703> ] .
+    data:CBNSAIDCoagulation
+        prov:wasDerivedFrom           <http://hdl.handle.net/10222/43703> .
+}
+
+data:CBNSAIDCoagulation_publicationinfo {
+    data:CBNSAIDCoagulation_nanopub
+        prov:generatedAtTime          "2015-10-01"^^xsd:dateTime ;
+		    prov:wasAttributedTo          data:Veruska.
+}
+
+##############################################################
+
+data:CBIbuprofenPain_head {
+	  data:CBIbuprofenPain_nanopub
+        a                             nanopub:Nanopublication ;
+        nanopub:hasAssertion          data:CBIbuprofenPain ;
+        nanopub:hasProvenance         data:CBIbuprofenPain_provenance ;
+		    nanopub:hasPublicationInfo    data:CBIbuprofenPain_publicationinfo .
+}
+
+data:CBIbuprofenPain {
+    data:ActAdministerIbuprofen
+				vocab:causes 									data:TrPainkiller .
+    data:CBIbuprofenPain
+        a                             vocab:CausationBelief ;
+        vocab:strength                "L1"^^xsd:string;
+        vocab:frequency               "always"^^xsd:string.
+}
+
+data:CBIbuprofenPain_provenance {
+    data:CBIbuprofenPain_provenance
+        a                             oa:Annotation ;
+        oa:hasBody                    data:CBIbuprofenPain ;
+        oa:hasTarget                  [ oa:hasSource <http://hdl.handle.net/10222/43703> ] .
+    data:CBIbuprofenPain
+        prov:wasDerivedFrom           <http://hdl.handle.net/10222/43703> .
+}
+
+data:CBIbuprofenPain_publicationinfo {
+    data:CBIbuprofenPain_nanopub
+        prov:generatedAtTime          "2015-10-01"^^xsd:dateTime ;
+		    prov:wasAttributedTo          data:Veruska.
+}
+
+##############################################################
+
+data:CBDipyridamoleThrombus_head {
+	  data:CBDipyridamoleThrombus_nanopub
+        a                             nanopub:Nanopublication ;
+        nanopub:hasAssertion          data:CBDipyridamoleThrombus ;
+        nanopub:hasProvenance         data:CBDipyridamoleThrombus_provenance ;
+		    nanopub:hasPublicationInfo    data:CBDipyridamoleThrombus_publicationinfo .
+}
+
+data:CBDipyridamoleThrombus {
+    data:ActAdministerDipyridamole
+				vocab:causes 									data:TrDecreaseBC .
+    data:CBDipyridamoleThrombus
+        a                             vocab:CausationBelief ;
+        vocab:strength                "L1"^^xsd:string;
+        vocab:frequency               "always"^^xsd:string.
+}
+
+data:CBDipyridamoleThrombus_provenance {
+    data:CBDipyridamoleThrombus_provenance
+        a                             oa:Annotation ;
+        oa:hasBody                    data:CBDipyridamoleThrombus ;
+        oa:hasTarget                  [ oa:hasSource <http://hdl.handle.net/10222/43703> ] .
+    data:CBDipyridamoleThrombus
+        prov:wasDerivedFrom           <http://hdl.handle.net/10222/43703> .
+}
+
+data:CBDipyridamoleThrombus_publicationinfo {
+    data:CBDipyridamoleThrombus_nanopub
+        prov:generatedAtTime          "2015-10-01"^^xsd:dateTime ;
+		    prov:wasAttributedTo          data:Veruska.
+}
+
+##############################################################
+# Josip addition - Dipyridamole vascular event
+# defined new transition: TrDecreaseRiskVascularEvent
+data:CBDipyridamoleVascularEvent_head {
+	  data:CBDipyridamoleVascularEvent_nanopub
+        a                             nanopub:Nanopublication ;
+        nanopub:hasAssertion          data:CBDipyridamoleVascularEvent ;
+        nanopub:hasProvenance         data:CBDipyridamoleVascularEvent_provenance ;
+		    nanopub:hasPublicationInfo    data:CBDipyridamoleVascularEvent_publicationinfo .
+}
+
+data:CBDipyridamoleVascularEvent {
+    data:ActAdministerDipyridamole
+        vocab:causes                  data:TrDecreaseHighRiskVascularEvent .
+    data:CBDipyridamoleVascularEvent
+        a                             vocab:CausationBelief ;
+        vocab:strength                "L1"^^xsd:string;
+        vocab:frequency               "always"^^xsd:string.
+}
+
+data:CBDipyridamoleVascularEvent_provenance {
+    data:CBDipyridamoleVascularEvent_provenance
+        a                             oa:Annotation ;
+        oa:hasBody                    data:CBDipyridamoleVascularEvent ;
+        oa:hasTarget                  [ oa:hasSource <https://pubmed.ncbi.nlm.nih.gov/22195153/> ] .
+    data:CBDipyridamoleVascularEvent
+        prov:wasDerivedFrom           <https://pubmed.ncbi.nlm.nih.gov/22195153/> .
+}
+
+data:CBDipyridamoleVascularEvent_publicationinfo {
+    data:CBDipyridamoleVascularEvent_nanopub
+        prov:generatedAtTime          "2015-10-01"^^xsd:dateTime ;
+		    prov:wasAttributedTo          data:Veruska.
+}
+
+##############################################################
+
+data:CBInsulinLBS_head {
+	  data:CBInsulinLBS_nanopub
+        a                             nanopub:Nanopublication ;
+        nanopub:hasAssertion          data:CBInsulinLBS ;
+        nanopub:hasProvenance         data:CBInsulinLBS_provenance ;
+		    nanopub:hasPublicationInfo    data:CBInsulinLBS_publicationinfo .
+}
+
+data:CBInsulinLBS {
+    data:ActAdministerInsulin
+				vocab:causes 									data:TrDecreaseLBS .
+    data:CBInsulinLBS
+        a                             vocab:CausationBelief ;
+        vocab:strength                "L1"^^xsd:string;
+        vocab:frequency               "always"^^xsd:string.
+}
+
+data:CBInsulinLBS_provenance {
+    data:CBInsulinLBS_provenance
+        a                             oa:Annotation ;
+        oa:hasBody                    data:CBInsulinLBS ;
+        oa:hasTarget                  [ oa:hasSource <http://hdl.handle.net/10222/43703> ] .
+    data:CBInsulinLBS
+        prov:wasDerivedFrom           <http://hdl.handle.net/10222/43703> .
+}
+
+data:CBInsulinLBS_publicationinfo {
+    data:CBInsulinLBS_nanopub
+        prov:generatedAtTime          "2015-10-01"^^xsd:dateTime ;
+		    prov:wasAttributedTo          data:Veruska.
+}
+
+##############################################################
+
+data:CBThiazideBP_head {
+	  data:CBThiazideBP_nanopub
+        a                             nanopub:Nanopublication ;
+        nanopub:hasAssertion          data:CBThiazideBP ;
+        nanopub:hasProvenance         data:CBThiazideBP_provenance ;
+		    nanopub:hasPublicationInfo    data:CBThiazideBP_publicationinfo .
+}
+
+data:CBThiazideBP {
+    data:ActAdministerThiazide
+				vocab:causes 									data:TrDecreaseBP .
+    data:CBThiazideBP
+        a                             vocab:CausationBelief ;
+        vocab:strength                "L1"^^xsd:string;
+        vocab:frequency               "always"^^xsd:string.
+}
+
+data:CBThiazideBP_provenance {
+    data:CBThiazideBP_provenance
+        a                             oa:Annotation ;
+        oa:hasBody                    data:CBThiazideBP ;
+        oa:hasTarget                  [ oa:hasSource <http://hdl.handle.net/10222/43703> ] .
+    data:CBThiazideBP
+        prov:wasDerivedFrom           <http://hdl.handle.net/10222/43703> .
+}
+
+data:CBThiazideBP_publicationinfo {
+    data:CBThiazideBP_nanopub
+        prov:generatedAtTime          "2015-10-01"^^xsd:dateTime ;
+		    prov:wasAttributedTo          data:Veruska.
+}
+
+##############################################################
+
+data:CBClopidogrelThrombus_head {
+	  data:CBClopidogrelThrombus_nanopub
+        a                             nanopub:Nanopublication ;
+        nanopub:hasAssertion          data:CBClopidogrelThrombus ;
+        nanopub:hasProvenance         data:CBClopidogrelThrombus_provenance ;
+		    nanopub:hasPublicationInfo    data:CBClopidogrelThrombus_publicationinfo .
+}
+
+data:CBClopidogrelThrombus {
+    data:ActAdministerClopidogrel
+				vocab:causes 									data:TrDecreaseBC .
+    data:CBClopidogrelThrombus
+        a                             vocab:CausationBelief ;
+        vocab:strength                "L1"^^xsd:string;
+        vocab:frequency               "always"^^xsd:string.
+}
+
+data:CBClopidogrelThrombus_provenance {
+    data:CBClopidogrelThrombus_provenance
+        a                             oa:Annotation ;
+        oa:hasBody                    data:CBClopidogrelThrombus ;
+        oa:hasTarget                  [ oa:hasSource <http://hdl.handle.net/10222/43703> ] .
+    data:CBClopidogrelThrombus
+        prov:wasDerivedFrom           <http://hdl.handle.net/10222/43703> .
+}
+
+data:CBClopidogrelThrombus_publicationinfo {
+    data:CBClopidogrelThrombus_nanopub
+        prov:generatedAtTime          "2015-10-01"^^xsd:dateTime ;
+		    prov:wasAttributedTo          data:Veruska.
+}
+
+##############################################################
+# Josip: Will this cause an internal or external event? I personally believe external since i do not tell it to take this
+# I was correct. It is detected as an external alternative action since i do not explicitly mention it in Reg&Norms
+data:CBClopidogrelVascularEvent_head {
+	  data:CBClopidogrelVascularEvent_nanopub
+        a                             nanopub:Nanopublication ;
+        nanopub:hasAssertion          data:CBClopidogrelVascularEvent ;
+        nanopub:hasProvenance         data:CBClopidogrelVascularEvent_provenance ;
+		    nanopub:hasPublicationInfo    data:CBClopidogrelVascularEvent_publicationinfo .
+}
+
+data:CBClopidogrelVascularEvent {
+    data:ActAdministerClopidogrel
+				vocab:causes 									data:TrDecreaseMediumRiskVascularEvent .
+    data:CBClopidogrelVascularEvent
+        a                             vocab:CausationBelief ;
+        vocab:strength                "L1"^^xsd:string;
+        vocab:frequency               "always"^^xsd:string.
+}
+
+data:CBClopidogrelVascularEvent_provenance {
+    data:CBClopidogrelVascularEvent_provenance
+        a                             oa:Annotation ;
+        oa:hasBody                    data:CBClopidogrelVascularEvent ;
+        oa:hasTarget                  [ oa:hasSource <http://hdl.handle.net/10222/43703> ] .
+    data:CBClopidogrelVascularEvent
+        prov:wasDerivedFrom           <http://hdl.handle.net/10222/43703> .
+}
+
+data:CBClopidogrelVascularEvent_publicationinfo {
+    data:CBClopidogrelVascularEvent_nanopub
+        prov:generatedAtTime          "2015-10-01"^^xsd:dateTime ;
+		    prov:wasAttributedTo          data:Veruska.
+}
+
+##############################################################
+##################### Addition for MGCDS #####################
+##############################################################
+
+# Still have to add the following:
+# TrNoSecondaryOsteoporosis
+# TrSecondaryOsteoporosis
+# TrReduceRiskFracture
+
+##############################################################
+# Josip addition - PPI/Nexium - Osteoporosis
+##############################################################
+# defined new transition: TrHealingUlcer
+data:CBNexiumDU_head {
+	  data:CBNexiumDU_nanopub
+        a                             nanopub:Nanopublication ;
+        nanopub:hasAssertion          data:CBNexiumDU ;
+        nanopub:hasProvenance         data:CBNexiumDU_provenance ;
+		    nanopub:hasPublicationInfo    data:CBNexiumDU_publicationinfo .
+}
+
+data:CBNexiumDU {
+    data:ActAdministerNexium
+        vocab:causes                  data:TrHealingUlcer .
+    data:CBNexiumDU
+        a                             vocab:CausationBelief ;
+        vocab:strength                "L1"^^xsd:string;
+        vocab:frequency               "always"^^xsd:string.
+}
+
+data:CBNexiumDU_provenance {
+    data:CBNexiumDU_provenance
+        a                             oa:Annotation ;
+        oa:hasBody                    data:CBNexiumDU ;
+        oa:hasTarget                  [ oa:hasSource <https://pubmed.ncbi.nlm.nih.gov/22195153/> ] .
+    data:CBNexiumDU
+        prov:wasDerivedFrom           <https://pubmed.ncbi.nlm.nih.gov/22195153/> .
+}
+
+data:CBNexiumDU_publicationinfo {
+    data:CBNexiumDU_nanopub
+        prov:generatedAtTime          "2015-10-01"^^xsd:dateTime ;
+		    prov:wasAttributedTo          data:Veruska.
+}
+
+
+##############################################################
+data:CBNexiumGIB_head {
+	  data:CBNexiumGIB_nanopub
+        a                             nanopub:Nanopublication ;
+        nanopub:hasAssertion          data:CBNexiumGIB ;
+        nanopub:hasProvenance         data:CBNexiumGIB_provenance ;
+		    nanopub:hasPublicationInfo    data:CBNexiumGIB_publicationinfo .
+}
+
+data:CBNexiumGIB {
+    data:ActAdministerNexium
+        vocab:causes                  data:TrDecreaseRiskGIB .
+    data:CBNexiumGIB
+        a                             vocab:CausationBelief ;
+        vocab:strength                "L1"^^xsd:string;
+        vocab:frequency               "always"^^xsd:string.
+}
+
+data:CBNexiumGIB_provenance {
+    data:CBNexiumGIB_provenance
+        a                             oa:Annotation ;
+        oa:hasBody                    data:CBNexiumGIB ;
+        oa:hasTarget                  [ oa:hasSource <https://pubmed.ncbi.nlm.nih.gov/22195153/> ] .
+    data:CBNexiumGIB
+        prov:wasDerivedFrom           <https://pubmed.ncbi.nlm.nih.gov/22195153/> .
+}
+
+data:CBNexiumGIB_publicationinfo {
+    data:CBNexiumGIB_nanopub
+        prov:generatedAtTime          "2015-10-01"^^xsd:dateTime ;
+		    prov:wasAttributedTo          data:Veruska.
+}
+
+##############################################################
+data:CBNexiumOsteoporosis_head {
+	  data:CBNexiumOsteoporosis_nanopub
+        a                             nanopub:Nanopublication ;
+        nanopub:hasAssertion          data:CBNexiumOsteoporosis ;
+        nanopub:hasProvenance         data:CBNexiumOsteoporosis_provenance ;
+		    nanopub:hasPublicationInfo    data:CBNexiumOsteoporosis_publicationinfo .
+}
+
+data:CBNexiumOsteoporosis {
+    data:ActAdministerNexium
+        vocab:causes                  data:TrSecondaryOsteoporosis .
+    data:CBNexiumOsteoporosis
+        a                             vocab:CausationBelief ;
+        vocab:strength                "L1"^^xsd:string;
+        vocab:frequency               "always"^^xsd:string.
+}
+
+data:CBNexiumOsteoporosis_provenance {
+    data:CBNexiumOsteoporosis_provenance
+        a                             oa:Annotation ;
+        oa:hasBody                    data:CBNexiumOsteoporosis ;
+        oa:hasTarget                  [ oa:hasSource <https://pubmed.ncbi.nlm.nih.gov/22195153/> ] .
+    data:CBNexiumOsteoporosis
+        prov:wasDerivedFrom           <https://pubmed.ncbi.nlm.nih.gov/22195153/> .
+}
+
+data:CBNexiumOsteoporosis_publicationinfo {
+    data:CBNexiumOsteoporosis_nanopub
+        prov:generatedAtTime          "2015-10-01"^^xsd:dateTime ;
+		    prov:wasAttributedTo          data:Veruska.
+}
+
+##############################################################
+data:CBPPIOsteoporosis_head {
+	  data:CBPPIOsteoporosis_nanopub
+        a                             nanopub:Nanopublication ;
+        nanopub:hasAssertion          data:CBPPIOsteoporosis ;
+        nanopub:hasProvenance         data:CBPPIOsteoporosis_provenance ;
+		    nanopub:hasPublicationInfo    data:CBPPIOsteoporosis_publicationinfo .
+}
+
+data:CBPPIOsteoporosis {
+    data:ActAdministerPPI
+        vocab:causes                  data:TrSecondaryOsteoporosis .
+    data:CBPPIOsteoporosis
+        a                             vocab:CausationBelief ;
+        vocab:strength                "L1"^^xsd:string;
+        vocab:frequency               "always"^^xsd:string.
+}
+
+data:CBPPIOsteoporosis_provenance {
+    data:CBPPIOsteoporosis_provenance
+        a                             oa:Annotation ;
+        oa:hasBody                    data:CBPPIOsteoporosis ;
+        oa:hasTarget                  [ oa:hasSource <https://pubmed.ncbi.nlm.nih.gov/22195153/> ] .
+    data:CBPPIOsteoporosis
+        prov:wasDerivedFrom           <https://pubmed.ncbi.nlm.nih.gov/22195153/> .
+}
+
+data:CBPPIOsteoporosis_publicationinfo {
+    data:CBPPIOsteoporosis_nanopub
+        prov:generatedAtTime          "2015-10-01"^^xsd:dateTime ;
+		    prov:wasAttributedTo          data:Veruska.
+}
+
+##############################################################
+# Josip addition - Alendronate, Risedronate, Teriparatide - Fracture risk
+# Zoledronic acid
+##############################################################
+
+data:CBAlendronateFracture_head {
+	  data:CBAlendronateFracture_nanopub
+        a                             nanopub:Nanopublication ;
+        nanopub:hasAssertion          data:CBAlendronateFracture ;
+        nanopub:hasProvenance         data:CBAlendronateFracture_provenance ;
+		    nanopub:hasPublicationInfo    data:CBAlendronateFracture_publicationinfo .
+}
+
+data:CBAlendronateFracture {
+    data:ActAdministerAlendronate
+        vocab:causes                  data:TrReduceRiskFracture .
+    data:CBAlendronateFracture
+        a                             vocab:CausationBelief ;
+        vocab:strength                "L1"^^xsd:string;
+        vocab:frequency               "always"^^xsd:string.
+}
+
+data:CBAlendronateFracture_provenance {
+    data:CBAlendronateFracture_provenance
+        a                             oa:Annotation ;
+        oa:hasBody                    data:CBAlendronateFracture ;
+        oa:hasTarget                  [ oa:hasSource <https://pubmed.ncbi.nlm.nih.gov/22195153/> ] .
+    data:CBAlendronateFracture
+        prov:wasDerivedFrom           <https://pubmed.ncbi.nlm.nih.gov/22195153/> .
+}
+
+data:CBAlendronateFracture_publicationinfo {
+    data:CBAlendronateFracture_nanopub
+        prov:generatedAtTime          "2015-10-01"^^xsd:dateTime ;
+		    prov:wasAttributedTo          data:Veruska.
+}
+
+##############################################################
+
+data:CBZoledronicAcidFracture_head {
+	  data:CBZoledronicAcidFracture_nanopub
+        a                             nanopub:Nanopublication ;
+        nanopub:hasAssertion          data:CBZoledronicAcidFracture ;
+        nanopub:hasProvenance         data:CBZoledronicAcidFracture_provenance ;
+		    nanopub:hasPublicationInfo    data:CBZoledronicAcidFracture_publicationinfo .
+}
+
+data:CBZoledronicAcidFracture {
+    data:ActAdministerZoledronicAcid
+        vocab:causes                  data:TrReduceRiskFracture .
+    data:CBZoledronicAcidFracture
+        a                             vocab:CausationBelief ;
+        vocab:strength                "L1"^^xsd:string;
+        vocab:frequency               "always"^^xsd:string.
+}
+
+data:CBZoledronicAcidFracture_provenance {
+    data:CBZoledronicAcidFracture_provenance
+        a                             oa:Annotation ;
+        oa:hasBody                    data:CBZoledronicAcidFracture ;
+        oa:hasTarget                  [ oa:hasSource <https://pubmed.ncbi.nlm.nih.gov/22195153/> ] .
+    data:CBZoledronicAcidFracture
+        prov:wasDerivedFrom           <https://pubmed.ncbi.nlm.nih.gov/22195153/> .
+}
+
+data:CBZoledronicAcidFracture_publicationinfo {
+    data:CBZoledronicAcidFracture_nanopub
+        prov:generatedAtTime          "2015-10-01"^^xsd:dateTime ;
+		    prov:wasAttributedTo          data:Veruska.
+}
+
+##############################################################
+
+data:CBRisedronateFracture_head {
+	  data:CBRisedronateFracture_nanopub
+        a                             nanopub:Nanopublication ;
+        nanopub:hasAssertion          data:CBRisedronateFracture ;
+        nanopub:hasProvenance         data:CBRisedronateFracture_provenance ;
+		    nanopub:hasPublicationInfo    data:CBRisedronateFracture_publicationinfo .
+}
+
+data:CBRisedronateFracture {
+    data:ActAdministerRisedronate
+        vocab:causes                  data:TrReduceRiskFracture .
+    data:CBRisedronateFracture
+        a                             vocab:CausationBelief ;
+        vocab:strength                "L1"^^xsd:string;
+        vocab:frequency               "always"^^xsd:string.
+}
+
+data:CBRisedronateFracture_provenance {
+    data:CBRisedronateFracture_provenance
+        a                             oa:Annotation ;
+        oa:hasBody                    data:CBRisedronateFracture ;
+        oa:hasTarget                  [ oa:hasSource <https://pubmed.ncbi.nlm.nih.gov/22195153/> ] .
+    data:CBRisedronateFracture
+        prov:wasDerivedFrom           <https://pubmed.ncbi.nlm.nih.gov/22195153/> .
+}
+
+data:CBRisedronateFracture_publicationinfo {
+    data:CBRisedronateFracture_nanopub
+        prov:generatedAtTime          "2015-10-01"^^xsd:dateTime ;
+		    prov:wasAttributedTo          data:Veruska.
+}
+
+##############################################################
+
+data:CBTeriparatideFracture_head {
+	  data:CBTeriparatideFracture_nanopub
+        a                             nanopub:Nanopublication ;
+        nanopub:hasAssertion          data:CBTeriparatideFracture ;
+        nanopub:hasProvenance         data:CBTeriparatideFracture_provenance ;
+		    nanopub:hasPublicationInfo    data:CBTeriparatideFracture_publicationinfo .
+}
+
+data:CBTeriparatideFracture {
+    data:ActAdministerTeriparatide
+        vocab:causes                  data:TrReduceRiskFracture .
+    data:CBTeriparatideFracture
+        a                             vocab:CausationBelief ;
+        vocab:strength                "L1"^^xsd:string;
+        vocab:frequency               "always"^^xsd:string.
+}
+
+data:CBTeriparatideFracture_provenance {
+    data:CBTeriparatideFracture_provenance
+        a                             oa:Annotation ;
+        oa:hasBody                    data:CBTeriparatideFracture ;
+        oa:hasTarget                  [ oa:hasSource <https://pubmed.ncbi.nlm.nih.gov/22195153/> ] .
+    data:CBTeriparatideFracture
+        prov:wasDerivedFrom           <https://pubmed.ncbi.nlm.nih.gov/22195153/> .
+}
+
+data:CBTeriparatideFracture_publicationinfo {
+    data:CBTeriparatideFracture_nanopub
+        prov:generatedAtTime          "2015-10-01"^^xsd:dateTime ;
+		    prov:wasAttributedTo          data:Veruska.
+}
+
+
+##############################################################
+# Josip addition MGCDS Case 2 
+##############################################################
+# For Chronic Kidney Disease - Avoid increasing cardiovascular risk, (give aspirin to prevent increasing cardiovascular risk)
+# Recommended treatments involve: 
+# For low hemoglobin levels: Erythropoiesis stimulating agent(ESA, i.e. epoetin alfa, darbepoetin alfa), 
+# For metabolic abnormality: Calcium-based phosphate binder (calcium acetate)
+# Reduce blood clotting : Aspirin, warfarin
+
+# For Hypertension - Its about reducing high Blood Pressure. So we do not want to increase it.
+# Recommended treatments involved are all around high blood pressure control depending on preconditions (out of scope right now) 
+# ACE Inhibitor (capoten, monopril), Calcium Channel Blocker (amlodipine, diltiazem), Diuretic/thiazide (chlorthalidone, hydrochlorothiazide)
+
+# For AFib - 
+# Recommends: 
+# For rate control: Beta Blocker or non-dihydropyridine calcium channel blocker (CCB). Digoxin as alternative in case rate-control is not good enough
+# For thrombotic events (anticoagulation): Warfarin or DOAC [apixaban] (prevent thrombotic events)
+# Rhythm control therapy: dronedarone, flecainide, amiodarone, sodium channel blocker (propafenone)
+##############################################################
+# Chronic kidney disease (CKD) CBs (Aspirin, warfarin, apixaban thrombus)
+##############################################################
+
+data:CBAspirinThrombus_head {
+	  data:CBAspirinThrombus_nanopub
+        a                             nanopub:Nanopublication ;
+        nanopub:hasAssertion          data:CBAspirinThrombus ;
+        nanopub:hasProvenance         data:CBAspirinThrombus_provenance ;
+		    nanopub:hasPublicationInfo    data:CBAspirinThrombus_publicationinfo .
+}
+
+data:CBAspirinThrombus {
+    data:ActAdministerAspirin
+        vocab:causes                  data:TrReduceRiskBC .
+    data:CBAspirinThrombus
+        a                             vocab:CausationBelief ;
+        vocab:strength                "L1"^^xsd:string;
+        vocab:frequency               "always"^^xsd:string.
+}
+
+data:CBAspirinThrombus_provenance {
+    data:CBAspirinThrombus_provenance
+        a                             oa:Annotation ;
+        oa:hasBody                    data:CBAspirinThrombus ;
+        oa:hasTarget                  [ oa:hasSource <https://pubmed.ncbi.nlm.nih.gov/22195153/> ] .
+    data:CBAspirinThrombus
+        prov:wasDerivedFrom           <https://pubmed.ncbi.nlm.nih.gov/22195153/> .
+}
+
+data:CBAspirinThrombus_publicationinfo {
+    data:CBAspirinThrombus_nanopub
+        prov:generatedAtTime          "2015-10-01"^^xsd:dateTime ;
+		    prov:wasAttributedTo          data:Veruska.
+}
+
+##############################################################
+
+data:CBWarfarinThrombus_head {
+	  data:CBWarfarinThrombus_nanopub
+        a                             nanopub:Nanopublication ;
+        nanopub:hasAssertion          data:CBWarfarinThrombus ;
+        nanopub:hasProvenance         data:CBWarfarinThrombus_provenance ;
+		    nanopub:hasPublicationInfo    data:CBWarfarinThrombus_publicationinfo .
+}
+
+data:CBWarfarinThrombus {
+    data:ActAdministerWarfarin
+        vocab:causes                  data:TrReduceRiskBC .
+    data:CBWarfarinThrombus
+        a                             vocab:CausationBelief ;
+        vocab:strength                "L1"^^xsd:string;
+        vocab:frequency               "always"^^xsd:string.
+}
+
+data:CBWarfarinThrombus_provenance {
+    data:CBWarfarinThrombus_provenance
+        a                             oa:Annotation ;
+        oa:hasBody                    data:CBWarfarinThrombus ;
+        oa:hasTarget                  [ oa:hasSource <https://pubmed.ncbi.nlm.nih.gov/22195153/> ] .
+    data:CBWarfarinThrombus
+        prov:wasDerivedFrom           <https://pubmed.ncbi.nlm.nih.gov/22195153/> .
+}
+
+data:CBWarfarinThrombus_publicationinfo {
+    data:CBWarfarinThrombus_nanopub
+        prov:generatedAtTime          "2015-10-01"^^xsd:dateTime ;
+		    prov:wasAttributedTo          data:Veruska.
+}
+
+##############################################################
+
+data:CBApixabanThrombus_head {
+	  data:CBApixabanThrombus_nanopub
+        a                             nanopub:Nanopublication ;
+        nanopub:hasAssertion          data:CBApixabanThrombus ;
+        nanopub:hasProvenance         data:CBApixabanThrombus_provenance ;
+		    nanopub:hasPublicationInfo    data:CBApixabanThrombus_publicationinfo .
+}
+
+data:CBApixabanThrombus {
+    data:ActAdministerApixaban
+        vocab:causes                  data:TrReduceRiskBC .
+    data:CBApixabanThrombus
+        a                             vocab:CausationBelief ;
+        vocab:strength                "L1"^^xsd:string;
+        vocab:frequency               "always"^^xsd:string.
+}
+
+data:CBApixabanThrombus_provenance {
+    data:CBApixabanThrombus_provenance
+        a                             oa:Annotation ;
+        oa:hasBody                    data:CBApixabanThrombus ;
+        oa:hasTarget                  [ oa:hasSource <https://pubmed.ncbi.nlm.nih.gov/22195153/> ] .
+    data:CBApixabanThrombus
+        prov:wasDerivedFrom           <https://pubmed.ncbi.nlm.nih.gov/22195153/> .
+}
+
+data:CBApixabanThrombus_publicationinfo {
+    data:CBApixabanThrombus_nanopub
+        prov:generatedAtTime          "2015-10-01"^^xsd:dateTime ;
+		    prov:wasAttributedTo          data:Veruska.
+}
+
+##############################################################
+# low hemoglobin levels - EpoetinAlfa - missing in care action & drug types
+##############################################################
+
+data:CBEpoetinAlfaHemoglobin_head {
+	  data:CBEpoetinAlfaHemoglobin_nanopub
+        a                             nanopub:Nanopublication ;
+        nanopub:hasAssertion          data:CBEpoetinAlfaHemoglobin ;
+        nanopub:hasProvenance         data:CBEpoetinAlfaHemoglobin_provenance ;
+		    nanopub:hasPublicationInfo    data:CBEpoetinAlfaHemoglobin_publicationinfo .
+}
+
+data:CBEpoetinAlfaHemoglobin {
+    data:ActAdministerEpoetinAlfa
+        vocab:causes                  data:TrIncreaseHemoglobinLevels .
+    data:CBEpoetinAlfaHemoglobin
+        a                             vocab:CausationBelief ;
+        vocab:strength                "L1"^^xsd:string;
+        vocab:frequency               "always"^^xsd:string.
+}
+
+data:CBEpoetinAlfaHemoglobin_provenance {
+    data:CBEpoetinAlfaHemoglobin_provenance
+        a                             oa:Annotation ;
+        oa:hasBody                    data:CBEpoetinAlfaHemoglobin ;
+        oa:hasTarget                  [ oa:hasSource <https://pubmed.ncbi.nlm.nih.gov/22195153/> ] .
+    data:CBEpoetinAlfaHemoglobin
+        prov:wasDerivedFrom           <https://pubmed.ncbi.nlm.nih.gov/22195153/> .
+}
+
+data:CBEpoetinAlfaHemoglobin_publicationinfo {
+    data:CBEpoetinAlfaHemoglobin_nanopub
+        prov:generatedAtTime          "2015-10-01"^^xsd:dateTime ;
+		    prov:wasAttributedTo          data:Veruska.
+}
+
+##############################################################
+# Metabolic abnormality - Calcium-based phosphate binder (calcium acetate)
+##############################################################
+
+data:CBCalciumAcetateMA_head {
+	  data:CBCalciumAcetateMA_nanopub
+        a                             nanopub:Nanopublication ;
+        nanopub:hasAssertion          data:CBCalciumAcetateMA ;
+        nanopub:hasProvenance         data:CBCalciumAcetateMA_provenance ;
+		    nanopub:hasPublicationInfo    data:CBEpoetinAlfaHemoglobin_publicationinfo .
+}
+
+data:CBCalciumAcetateMA {
+    data:ActAdministerCalciumAcetate
+        vocab:causes                  data:TrHealingMA .
+    data:CBCalciumAcetateMA
+        a                             vocab:CausationBelief ;
+        vocab:strength                "L1"^^xsd:string;
+        vocab:frequency               "always"^^xsd:string.
+}
+
+data:CBCalciumAcetateMA_provenance {
+    data:CBCalciumAcetateMA_provenance
+        a                             oa:Annotation ;
+        oa:hasBody                    data:CBCalciumAcetateMA ;
+        oa:hasTarget                  [ oa:hasSource <https://pubmed.ncbi.nlm.nih.gov/22195153/> ] .
+    data:CBCalciumAcetateMA
+        prov:wasDerivedFrom           <https://pubmed.ncbi.nlm.nih.gov/22195153/> .
+}
+
+data:CBCalciumAcetateMA_publicationinfo {
+    data:CBCalciumAcetateMA_nanopub
+        prov:generatedAtTime          "2015-10-01"^^xsd:dateTime ;
+		    prov:wasAttributedTo          data:Veruska.
+}
+
+
+##############################################################
+# Hypertension (HT) CBs Mostly reducing blood pressure
+# Capoten (ACE inhibitor), Amlodipine (calcium channel blocker), Chlorthalidone (diuretic, thiazide)
+##############################################################
+
+data:CBCapotenBP_head {
+	  data:CBCapotenBP_nanopub
+        a                             nanopub:Nanopublication ;
+        nanopub:hasAssertion          data:CBCapotenBP ;
+        nanopub:hasProvenance         data:CBCapotenBP_provenance ;
+		    nanopub:hasPublicationInfo    data:CBCapotenBP_publicationinfo .
+}
+
+data:CBCapotenBP {
+    data:ActAdministerCapoten
+        vocab:causes                  data:TrDecreaseBP .
+    data:CBCapotenBP
+        a                             vocab:CausationBelief ;
+        vocab:strength                "L1"^^xsd:string;
+        vocab:frequency               "always"^^xsd:string.
+}
+
+data:CBCapotenBP_provenance {
+    data:CBCapotenBP_provenance
+        a                             oa:Annotation ;
+        oa:hasBody                    data:CBCapotenBP ;
+        oa:hasTarget                  [ oa:hasSource <https://pubmed.ncbi.nlm.nih.gov/22195153/> ] .
+    data:CBCapotenBP
+        prov:wasDerivedFrom           <https://pubmed.ncbi.nlm.nih.gov/22195153/> .
+}
+
+data:CBCapotenBP_publicationinfo {
+    data:CBCapotenBP_nanopub
+        prov:generatedAtTime          "2015-10-01"^^xsd:dateTime ;
+		    prov:wasAttributedTo          data:Veruska.
+}
+
+##############################################################
+
+data:CBAmlodipineBP_head {
+	  data:CBAmlodipineBP_nanopub
+        a                             nanopub:Nanopublication ;
+        nanopub:hasAssertion          data:CBAmlodipineBP ;
+        nanopub:hasProvenance         data:CBAmlodipineBP_provenance ;
+		    nanopub:hasPublicationInfo    data:CBAmlodipineBP_publicationinfo .
+}
+
+data:CBAmlodipineBP {
+    data:ActAdministerAmlodipine
+        vocab:causes                  data:TrDecreaseBP .
+    data:CBAmlodipineBP
+        a                             vocab:CausationBelief ;
+        vocab:strength                "L1"^^xsd:string;
+        vocab:frequency               "always"^^xsd:string.
+}
+
+data:CBAmlodipineBP_provenance {
+    data:CBAmlodipineBP_provenance
+        a                             oa:Annotation ;
+        oa:hasBody                    data:CBAmlodipineBP ;
+        oa:hasTarget                  [ oa:hasSource <https://pubmed.ncbi.nlm.nih.gov/22195153/> ] .
+    data:CBAmlodipineBP
+        prov:wasDerivedFrom           <https://pubmed.ncbi.nlm.nih.gov/22195153/> .
+}
+
+data:CBAmlodipineBP_publicationinfo {
+    data:CBAmlodipineBP_nanopub
+        prov:generatedAtTime          "2015-10-01"^^xsd:dateTime ;
+		    prov:wasAttributedTo          data:Veruska.
+}
+
+##############################################################
+
+data:CBChlorthalidoneBP_head {
+	  data:CBChlorthalidoneBP_nanopub
+        a                             nanopub:Nanopublication ;
+        nanopub:hasAssertion          data:CBChlorthalidoneBP ;
+        nanopub:hasProvenance         data:CBChlorthalidoneBP_provenance ;
+		    nanopub:hasPublicationInfo    data:CBChlorthalidoneBP_publicationinfo .
+}
+
+data:CBChlorthalidoneBP {
+    data:ActAdministerChlorthalidone
+        vocab:causes                  data:TrDecreaseBP .
+    data:CBChlorthalidoneBP
+        a                             vocab:CausationBelief ;
+        vocab:strength                "L1"^^xsd:string;
+        vocab:frequency               "always"^^xsd:string.
+}
+
+data:CBChlorthalidoneBP_provenance {
+    data:CBChlorthalidoneBP_provenance
+        a                             oa:Annotation ;
+        oa:hasBody                    data:CBChlorthalidoneBP ;
+        oa:hasTarget                  [ oa:hasSource <https://pubmed.ncbi.nlm.nih.gov/22195153/> ] .
+    data:CBChlorthalidoneBP
+        prov:wasDerivedFrom           <https://pubmed.ncbi.nlm.nih.gov/22195153/> .
+}
+
+data:CBChlorthalidoneBP_publicationinfo {
+    data:CBChlorthalidoneBP_nanopub
+        prov:generatedAtTime          "2015-10-01"^^xsd:dateTime ;
+		    prov:wasAttributedTo          data:Veruska.
+}
+
+##############################################################
+# AFib CBs regarding regulating rate control (Beta Blocker [acebutolol], non-dihydropyridine calcium channel blocker (CCB). Digoxin as alternative) and rhythm control (dronedarone, flecainide, amiodarone, sodium channel blocker (propafenone))
+# Capoten (ACE inhibitor), Amlodipine (calcium channel blocker), Chlorthalidone (diuretic, thiazide)
+##############################################################
+# Rate controls
+data:CBAcebutololRateControl_head {
+	  data:CBAcebutololRateControl_nanopub
+        a                             nanopub:Nanopublication ;
+        nanopub:hasAssertion          data:CBAcebutololRateControl ;
+        nanopub:hasProvenance         data:CBAcebutololRateControl_provenance ;
+		    nanopub:hasPublicationInfo    data:CBAcebutololRateControl_publicationinfo .
+}
+
+data:CBAcebutololRateControl {
+    data:ActAdministerAcebutolol
+        vocab:causes                  data:TrIncreaseRateControl .
+    data:CBAcebutololRateControl
+        a                             vocab:CausationBelief ;
+        vocab:strength                "L1"^^xsd:string;
+        vocab:frequency               "always"^^xsd:string.
+}
+
+data:CBAcebutololRateControl_provenance {
+    data:CBAcebutololRateControl_provenance
+        a                             oa:Annotation ;
+        oa:hasBody                    data:CBAcebutololRateControl ;
+        oa:hasTarget                  [ oa:hasSource <https://pubmed.ncbi.nlm.nih.gov/22195153/> ] .
+    data:CBAcebutololRateControl
+        prov:wasDerivedFrom           <https://pubmed.ncbi.nlm.nih.gov/22195153/> .
+}
+
+data:CBAcebutololRateControl_publicationinfo {
+    data:CBAcebutololRateControl_nanopub
+        prov:generatedAtTime          "2015-10-01"^^xsd:dateTime ;
+		    prov:wasAttributedTo          data:Veruska.
+}
+
+##############################################################
+# Rate controls
+data:CBAmlodipineRateControl_head {
+	  data:CBAmlodipineRateControl_nanopub
+        a                             nanopub:Nanopublication ;
+        nanopub:hasAssertion          data:CBAmlodipineRateControl ;
+        nanopub:hasProvenance         data:CBAmlodipineRateControl_provenance ;
+		    nanopub:hasPublicationInfo    data:CBAmlodipineRateControl_publicationinfo .
+}
+
+data:CBAmlodipineRateControl {
+    data:ActAdministerAmlodipine
+        vocab:causes                  data:TrIncreaseRateControl .
+    data:CBAmlodipineRateControl
+        a                             vocab:CausationBelief ;
+        vocab:strength                "L1"^^xsd:string;
+        vocab:frequency               "always"^^xsd:string.
+}
+
+data:CBAmlodipineRateControl_provenance {
+    data:CBAmlodipineRateControl_provenance
+        a                             oa:Annotation ;
+        oa:hasBody                    data:CBAmlodipineRateControl ;
+        oa:hasTarget                  [ oa:hasSource <https://pubmed.ncbi.nlm.nih.gov/22195153/> ] .
+    data:CBAmlodipineRateControl
+        prov:wasDerivedFrom           <https://pubmed.ncbi.nlm.nih.gov/22195153/> .
+}
+
+data:CBAmlodipineRateControl_publicationinfo {
+    data:CBAmlodipineRateControl_nanopub
+        prov:generatedAtTime          "2015-10-01"^^xsd:dateTime ;
+		    prov:wasAttributedTo          data:Veruska.
+}
+
+##############################################################
+# Rate controls
+data:CBDigoxinRateControl_head {
+	  data:CBDigoxinRateControl_nanopub
+        a                             nanopub:Nanopublication ;
+        nanopub:hasAssertion          data:CBDigoxinRateControl ;
+        nanopub:hasProvenance         data:CBDigoxinRateControl_provenance ;
+		    nanopub:hasPublicationInfo    data:CBDigoxinRateControl_publicationinfo .
+}
+
+data:CBDigoxinRateControl {
+    data:ActAdministerDigoxin
+        vocab:causes                  data:TrIncreaseRateControl .
+    data:CBDigoxinRateControl
+        a                             vocab:CausationBelief ;
+        vocab:strength                "L1"^^xsd:string;
+        vocab:frequency               "always"^^xsd:string.
+}
+
+data:CBDigoxinRateControl_provenance {
+    data:CBDigoxinRateControl_provenance
+        a                             oa:Annotation ;
+        oa:hasBody                    data:CBDigoxinRateControl ;
+        oa:hasTarget                  [ oa:hasSource <https://pubmed.ncbi.nlm.nih.gov/22195153/> ] .
+    data:CBDigoxinRateControl
+        prov:wasDerivedFrom           <https://pubmed.ncbi.nlm.nih.gov/22195153/> .
+}
+
+data:CBDigoxinRateControl_publicationinfo {
+    data:CBDigoxinRateControl_nanopub
+        prov:generatedAtTime          "2015-10-01"^^xsd:dateTime ;
+		    prov:wasAttributedTo          data:Veruska.
+}
+##############################################################
+#Rhythm control therapy: Dronedarone, Flecainide, Amiodarone, Sodium channel blocker (Propafenone)
+##############################################################
+data:CBDronedaroneRhythmTherapy_head {
+	  data:CBDronedaroneRhythmTherapy_nanopub
+        a                             nanopub:Nanopublication ;
+        nanopub:hasAssertion          data:CBDronedaroneRhythmTherapy ;
+        nanopub:hasProvenance         data:CBDronedaroneRhythmTherapy_provenance ;
+		    nanopub:hasPublicationInfo    data:CBDronedaroneRhythmTherapy_publicationinfo .
+}
+
+data:CBDronedaroneRhythmTherapy {
+    data:ActAdministerDronedarone
+        vocab:causes                  data:TrIncreaseRateControl .
+    data:CBDronedaroneRhythmTherapy
+        a                             vocab:CausationBelief ;
+        vocab:strength                "L1"^^xsd:string;
+        vocab:frequency               "always"^^xsd:string.
+}
+
+data:CBDronedaroneRhythmTherapy_provenance {
+    data:CBDronedaroneRhythmTherapy_provenance
+        a                             oa:Annotation ;
+        oa:hasBody                    data:CBDronedaroneRhythmTherapy ;
+        oa:hasTarget                  [ oa:hasSource <https://pubmed.ncbi.nlm.nih.gov/22195153/> ] .
+    data:CBDronedaroneRhythmTherapy
+        prov:wasDerivedFrom           <https://pubmed.ncbi.nlm.nih.gov/22195153/> .
+}
+
+data:CBDronedaroneRhythmTherapy_publicationinfo {
+    data:CBDronedaroneRhythmTherapy_nanopub
+        prov:generatedAtTime          "2015-10-01"^^xsd:dateTime ;
+		    prov:wasAttributedTo          data:Veruska.
+}
+
+##############################################################
+data:CBFlecainideRhythmTherapy_head {
+	  data:CBFlecainideRhythmTherapy_nanopub
+        a                             nanopub:Nanopublication ;
+        nanopub:hasAssertion          data:CBFlecainideRhythmTherapy ;
+        nanopub:hasProvenance         data:CBFlecainideRhythmTherapy_provenance ;
+		    nanopub:hasPublicationInfo    data:CBFlecainideRhythmTherapy_publicationinfo .
+}
+
+data:CBFlecainideRhythmTherapy {
+    data:ActAdministerFlecainide
+        vocab:causes                  data:TrIncreaseRateControl .
+    data:CBFlecainideRhythmTherapy
+        a                             vocab:CausationBelief ;
+        vocab:strength                "L1"^^xsd:string;
+        vocab:frequency               "always"^^xsd:string.
+}
+
+data:CBFlecainideRhythmTherapy_provenance {
+    data:CBFlecainideRhythmTherapy_provenance
+        a                             oa:Annotation ;
+        oa:hasBody                    data:CBFlecainideRhythmTherapy ;
+        oa:hasTarget                  [ oa:hasSource <https://pubmed.ncbi.nlm.nih.gov/22195153/> ] .
+    data:CBFlecainideRhythmTherapy
+        prov:wasDerivedFrom           <https://pubmed.ncbi.nlm.nih.gov/22195153/> .
+}
+
+data:CBFlecainideRhythmTherapy_publicationinfo {
+    data:CBFlecainideRhythmTherapy_nanopub
+        prov:generatedAtTime          "2015-10-01"^^xsd:dateTime ;
+		    prov:wasAttributedTo          data:Veruska.
+}
+
+##############################################################
+data:CBAmiodaroneRhythmTherapy_head {
+	  data:CBAmiodaroneRhythmTherapy_nanopub
+        a                             nanopub:Nanopublication ;
+        nanopub:hasAssertion          data:CBAmiodaroneRhythmTherapy ;
+        nanopub:hasProvenance         data:CBAmiodaroneRhythmTherapy_provenance ;
+		    nanopub:hasPublicationInfo    data:CBAmiodaroneRhythmTherapy_publicationinfo .
+}
+
+data:CBAmiodaroneRhythmTherapy {
+    data:ActAdministerAmiodarone
+        vocab:causes                  data:TrIncreaseRateControl .
+    data:CBAmiodaroneRhythmTherapy
+        a                             vocab:CausationBelief ;
+        vocab:strength                "L1"^^xsd:string;
+        vocab:frequency               "always"^^xsd:string.
+}
+
+data:CBAmiodaroneRhythmTherapy_provenance {
+    data:CBAmiodaroneRhythmTherapy_provenance
+        a                             oa:Annotation ;
+        oa:hasBody                    data:CBAmiodaroneRhythmTherapy ;
+        oa:hasTarget                  [ oa:hasSource <https://pubmed.ncbi.nlm.nih.gov/22195153/> ] .
+    data:CBAmiodaroneRhythmTherapy
+        prov:wasDerivedFrom           <https://pubmed.ncbi.nlm.nih.gov/22195153/> .
+}
+
+data:CBAmiodaroneRhythmTherapy_publicationinfo {
+    data:CBAmiodaroneRhythmTherapy_nanopub
+        prov:generatedAtTime          "2015-10-01"^^xsd:dateTime ;
+		    prov:wasAttributedTo          data:Veruska.
+}
+
+##############################################################
+data:CBPropafenoneRhythmTherapy_head {
+	  data:CBPropafenoneRhythmTherapy_nanopub
+        a                             nanopub:Nanopublication ;
+        nanopub:hasAssertion          data:CBPropafenoneRhythmTherapy ;
+        nanopub:hasProvenance         data:CBPropafenoneRhythmTherapy_provenance ;
+		    nanopub:hasPublicationInfo    data:CBPropafenoneRhythmTherapy_publicationinfo .
+}
+
+data:CBPropafenoneRhythmTherapy {
+    data:ActAdministerPropafenone
+        vocab:causes                  data:TrIncreaseRateControl .
+    data:CBPropafenoneRhythmTherapy
+        a                             vocab:CausationBelief ;
+        vocab:strength                "L1"^^xsd:string;
+        vocab:frequency               "always"^^xsd:string.
+}
+
+data:CBPropafenoneRhythmTherapy_provenance {
+    data:CBPropafenoneRhythmTherapy_provenance
+        a                             oa:Annotation ;
+        oa:hasBody                    data:CBPropafenoneRhythmTherapy ;
+        oa:hasTarget                  [ oa:hasSource <https://pubmed.ncbi.nlm.nih.gov/22195153/> ] .
+    data:CBPropafenoneRhythmTherapy
+        prov:wasDerivedFrom           <https://pubmed.ncbi.nlm.nih.gov/22195153/> .
+}
+
+data:CBPropafenoneRhythmTherapy_publicationinfo {
+    data:CBPropafenoneRhythmTherapy_nanopub
+        prov:generatedAtTime          "2015-10-01"^^xsd:dateTime ;
+		    prov:wasAttributedTo          data:Veruska.
+}
+
+##############################################################
+data:CBAmiodaroneVascularEvent_head {
+	  data:CBAmiodaroneVascularEvent_nanopub
+        a                             nanopub:Nanopublication ;
+        nanopub:hasAssertion          data:CBAmiodaroneVascularEvent ;
+        nanopub:hasProvenance         data:CBAmiodaroneVascularEvent_provenance ;
+		    nanopub:hasPublicationInfo    data:CBAmiodaroneVascularEvent_publicationinfo .
+}
+
+data:CBAmiodaroneVascularEvent {
+    data:ActAdministerAmiodarone
+        vocab:causes                  data:TrIncreaseRiskVascularEvent .
+    data:CBAmiodaroneVascularEvent
+        a                             vocab:CausationBelief ;
+        vocab:strength                "L1"^^xsd:string;
+        vocab:frequency               "always"^^xsd:string.
+}
+
+data:CBAmiodaroneVascularEvent_provenance {
+    data:CBAmiodaroneVascularEvent_provenance
+        a                             oa:Annotation ;
+        oa:hasBody                    data:CBAmiodaroneVascularEvent ;
+        oa:hasTarget                  [ oa:hasSource <https://pubmed.ncbi.nlm.nih.gov/22195153/> ] .
+    data:CBAmiodaroneVascularEvent
+        prov:wasDerivedFrom           <https://pubmed.ncbi.nlm.nih.gov/22195153/> .
+}
+
+data:CBAmiodaroneVascularEvent_publicationinfo {
+    data:CBAmiodaroneVascularEvent_nanopub
+        prov:generatedAtTime          "2015-10-01"^^xsd:dateTime ;
+		    prov:wasAttributedTo          data:Veruska.
+}
+
+##############################################################
+# atrioventricular block missing from ACE inhibitor in combination with beta blockers (acebutolol increases it)
+##############################################################
+
+data:CBAcebutololAtrioventricular_head {
+	  data:CBAcebutololAtrioventricular_nanopub
+        a                             nanopub:Nanopublication ;
+        nanopub:hasAssertion          data:CBAcebutololAtrioventricular ;
+        nanopub:hasProvenance         data:CBAcebutololAtrioventricular_provenance ;
+		    nanopub:hasPublicationInfo    data:CBAcebutololAtrioventricular_publicationinfo .
+}
+
+data:CBAcebutololAtrioventricular {
+    data:ActAdministerAcebutolol
+        vocab:causes                  data:TrIncreaseRiskAtrioventricularBlock .
+    data:CBAcebutololAtrioventricular
+        a                             vocab:CausationBelief ;
+        vocab:strength                "L1"^^xsd:string;
+        vocab:frequency               "always"^^xsd:string.
+}
+
+data:CBAcebutololAtrioventricular_provenance {
+    data:CBAcebutololAtrioventricular_provenance
+        a                             oa:Annotation ;
+        oa:hasBody                    data:CBAcebutololAtrioventricular ;
+        oa:hasTarget                  [ oa:hasSource <https://pubmed.ncbi.nlm.nih.gov/22195153/> ] .
+    data:CBAcebutololAtrioventricular
+        prov:wasDerivedFrom           <https://pubmed.ncbi.nlm.nih.gov/22195153/> .
+}
+
+data:CBAcebutololAtrioventricular_publicationinfo {
+    data:CBAcebutololAtrioventricular_nanopub
+        prov:generatedAtTime          "2015-10-01"^^xsd:dateTime ;
+		    prov:wasAttributedTo          data:Veruska.
+}
+##############################################################
+
+data:CBClopidogrelHaemorrhage_head {
+        data:CBClopidogrelHaemorrhage_nanopub
+          a                             nanopub:Nanopublication ;
+          nanopub:hasAssertion          data:CBClopidogrelHaemorrhage ;
+          nanopub:hasProvenance         data:CBClopidogrelHaemorrhage_provenance ;
+          nanopub:hasPublicationInfo    data:CBClopidogrelHaemorrhage_publicationinfo .
+}
+
+
+data:CBClopidogrelHaemorrhage {
+        data:ActAdministerClopidogrel
+                vocab:causes                  data:TrIncreaseRiskHaemorrhage .
+        data:CBClopidogrelHaemorrhage
+
+                a                             vocab:CausationBelief ;
+                vocab:strength                "L1"^^xsd:string;
+               vocab:frequency               "always"^^xsd:string.
+}
+
+
+data:CBClopidogrelHaemorrhage_provenance {
+        data:CBClopidogrelHaemorrhage_provenance
+                a                             oa:Annotation ;
+                oa:hasBody                    data:CBClopidogrelHaemorrhage ;
+                oa:hasTarget                  [ oa:hasSource <https://pubmed.ncbi.nlm.nih.gov/22195153/> ] .
+        data:CBClopidogrelHaemorrhage
+                prov:wasDerivedFrom           <https://pubmed.ncbi.nlm.nih.gov/22195153/> .
+
+}
+
+
+data:CBClopidogrelHaemorrhage_publicationinfo {
+        data:CBClopidogrelHaemorrhage_nanopub
+                prov:generatedAtTime          "2015-10-01"^^xsd:dateTime ;
+                        prov:wasAttributedTo          data:Veruska.
+}

@@ -1,0 +1,408 @@
+@base <http://anonymous.org/data/> .
+@prefix : <http://anonymous.org/data/> .
+@prefix vocab: <http://anonymous.org/vocab/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+
+#################################################################
+#
+#    Action Types
+#
+#################################################################
+
+
+:ActAdministerAspirin  rdf:type vocab:DrugAdministrationType, owl:NamedIndividual ;
+                            rdfs:label "Administer Aspirin"@en ;
+                            vocab:administrationOf :DrugTAspirin .
+
+
+:ActAdministerClopidogrel rdf:type vocab:DrugAdministrationType, owl:NamedIndividual ;
+                            rdfs:label "Administer Clopidogrel"@en ;
+                            vocab:administrationOf :DrugTClopidogrel .
+
+:ActAdministerDipyridamole rdf:type vocab:DrugAdministrationType, owl:NamedIndividual ;
+                            rdfs:label "Administer Dipyridamole"@en ;
+                            vocab:administrationOf :DrugTDipyridamole .
+
+
+:ActAdministerThiazide rdf:type vocab:DrugAdministrationType, owl:NamedIndividual ;
+                            rdfs:label "Administer Thiazide"@en ;
+                            vocab:administrationOf :DrugCatThiazide ;
+                            vocab:subsumes :ActAdministerBendroflumethiazide.
+
+
+:ActAdministerTramadol rdf:type vocab:DrugAdministrationType, owl:NamedIndividual ;
+                            rdfs:label "Administer Tramadol"@en ;
+                            vocab:administrationOf :DrugTTramadol .
+
+
+:ActAdministerInsulin rdf:type vocab:DrugAdministrationType, owl:NamedIndividual ;
+                        rdfs:label "Administer Insulin"@en ;
+                        vocab:administrationOf :DrugTInsulin .
+
+
+:ActAdministerPPI rdf:type vocab:DrugAdministrationType, owl:NamedIndividual ;
+                    rdfs:label "Administer PPI"@en ;
+                    vocab:administrationOf :DrugCatPPI .
+
+
+:ActAdministerIbuprofen rdf:type vocab:DrugAdministrationType, owl:NamedIndividual ;
+                        rdfs:label "Administer Ibuprofen"@en ;
+                        vocab:administrationOf :DrugTIbuprofen .
+
+
+:ActEradicationTherapy rdf:type vocab:DrugAdministrationType, owl:NamedIndividual ;
+                        rdfs:label "Bacteria Eradication Therapy"@en ;
+                        vocab:administrationOf :DrugCatAntiBacterialAgent .
+
+:ActAdministerNSAID rdf:type vocab:DrugAdministrationType, owl:NamedIndividual ;
+                    rdfs:label "Administer NSAID"@en ;
+                    vocab:administrationOf :DrugCatNSAID .
+
+:ActAdministerEpoprostenol rdf:type vocab:DrugAdministrationType, owl:NamedIndividual ;
+                    rdfs:label "Administer Epoprostenol"@en ;
+                    vocab:administrationOf :DrugTEpoprostenol .
+
+:ActAdministerBendroflumethiazide rdf:type vocab:DrugAdministrationType, owl:NamedIndividual ;
+                    rdfs:label "Administer Bendroflumethiazide"@en ;
+                    vocab:administrationOf :DrugTBendroflumethiazide .
+	
+### New Drugs for MGCDS test cases	
+					
+:ActAdministerNexium rdf:type vocab:DrugAdministrationType, owl:NamedIndividual ;
+                    rdfs:label "Administer Nexium"@en ;
+                    vocab:administrationOf :DrugTNexium .
+					
+:ActAdministerAlendronate rdf:type vocab:DrugAdministrationType, owl:NamedIndividual ;
+                    rdfs:label "Administer Alendronate"@en ;
+                    vocab:administrationOf :DrugTAlendronate .
+					
+:ActAdministerRisedronate rdf:type vocab:DrugAdministrationType, owl:NamedIndividual ;
+                    rdfs:label "Administer Risedronate"@en ;
+                    vocab:administrationOf :DrugTRisedronate .
+					
+:ActAdministerTeriparatide rdf:type vocab:DrugAdministrationType, owl:NamedIndividual ;
+                    rdfs:label "Administer Teriparatide"@en ;
+                    vocab:administrationOf :DrugTTeriparatide .
+					
+:ActAdministerZoledronicAcid rdf:type vocab:DrugAdministrationType, owl:NamedIndividual ;
+					rdfs:label "Administer Zoledronic Acid"@en ;
+					vocab:administrationOf :DrugTZoledronicAcid .
+					
+### New Drugs for MGCDS test cases	(case 2)
+
+:ActAdministerWarfarin rdf:type vocab:DrugAdministrationType, owl:NamedIndividual ;
+					rdfs:label "Administer Warfarin"@en ;
+					vocab:administrationOf :DrugTWarfarin .
+
+:ActAdministerAmiodarone rdf:type vocab:DrugAdministrationType, owl:NamedIndividual ;
+					rdfs:label "Administer Amiodarone"@en ;
+					vocab:administrationOf :DrugTAmiodarone .
+
+:ActAdministerPropafenone rdf:type vocab:DrugAdministrationType, owl:NamedIndividual ;
+					rdfs:label "Administer Propafenone"@en ;
+					vocab:administrationOf :DrugTPropafenone .
+
+:ActAdministerDiltiazem rdf:type vocab:DrugAdministrationType, owl:NamedIndividual ;
+					rdfs:label "Administer Diltiazem"@en ;
+					vocab:administrationOf :DrugTDiltiazem .
+					
+:ActAdministerAcebutolol rdf:type vocab:DrugAdministrationType, owl:NamedIndividual ;
+					rdfs:label "Administer Acebutolol"@en ;
+					vocab:administrationOf :DrugTAcebutolol .	
+
+:ActAdministerApixaban rdf:type vocab:DrugAdministrationType, owl:NamedIndividual ;
+					rdfs:label "Administer Apixaban"@en ;
+					vocab:administrationOf :DrugTApixaban .					
+
+:ActAdministerACEInhibitor rdf:type vocab:DrugAdministrationType, owl:NamedIndividual ;
+					rdfs:label "Administer ACE Inhibitor"@en ;
+					vocab:administrationOf :DrugCatACEInhibitor .
+
+:ActAdministerBB rdf:type vocab:DrugAdministrationType, owl:NamedIndividual ;
+					rdfs:label "Administer Beta Blocker"@en ;
+					vocab:administrationOf :DrugCatBB .
+					
+#########################################
+
+:ActAdministerFlecainide rdf:type vocab:DrugAdministrationType, owl:NamedIndividual ;
+					rdfs:label "Administer Flecainide"@en ;
+					vocab:administrationOf :DrugTFlecainide .
+					
+:ActAdministerDronedarone rdf:type vocab:DrugAdministrationType, owl:NamedIndividual ;
+					rdfs:label "Administer Dronedarone"@en ;
+					vocab:administrationOf :DrugTDronedarone .
+					
+:ActAdministerDigoxin  rdf:type vocab:DrugAdministrationType, owl:NamedIndividual ;
+					rdfs:label "Administer Digoxin"@en ;
+					vocab:administrationOf :DrugTDigoxin .
+					
+:ActAdministerAmlodipine rdf:type vocab:DrugAdministrationType, owl:NamedIndividual ;
+					rdfs:label "Administer Amlodipine"@en ;
+					vocab:administrationOf :DrugTAmlodipine .
+					
+:ActAdministerChlorthalidone rdf:type vocab:DrugAdministrationType, owl:NamedIndividual ;
+					rdfs:label "Administer Chlorthalidone"@en ;
+					vocab:administrationOf :DrugTChlorthalidone .
+					
+:ActAdministerCapoten rdf:type vocab:DrugAdministrationType, owl:NamedIndividual ;
+					rdfs:label "Administer Capoten"@en ;
+					vocab:administrationOf :DrugTCapoten .
+					
+:ActAdministerCalciumAcetate rdf:type vocab:DrugAdministrationType, owl:NamedIndividual ;
+					rdfs:label "Administer Calcium Acetate"@en ;
+					vocab:administrationOf :DrugTCalciumAcetate .
+					
+:ActAdministerEpoetinAlfa rdf:type vocab:DrugAdministrationType, owl:NamedIndividual ;
+					rdfs:label "Administer Epoetin Alfa"@en ;
+					vocab:administrationOf :DrugTEpoetinAlfa .
+
+
+#################################################################
+#
+#    Drug Types
+#
+#################################################################
+
+:DrugTAspirin rdf:type vocab:DrugType, owl:NamedIndividual ;
+                rdfs:label "Aspirin"@en .
+
+:DrugTIbuprofen rdf:type vocab:DrugType, owl:NamedIndividual ;
+                rdfs:label "Ibuprofen"@en .
+
+:DrugTClopidogrel rdf:type vocab:DrugType, owl:NamedIndividual ;
+                rdfs:label "Clopidogrel"@en .
+
+:DrugTTramadol rdf:type vocab:DrugType, owl:NamedIndividual ;
+                rdfs:label "Tramadol"@en .
+
+:DrugTDipyridamole rdf:type vocab:DrugType, owl:NamedIndividual ;
+                    rdfs:label "Dipyridamole"@en .
+
+:DrugTEpoprostenol rdf:type vocab:DrugType, owl:NamedIndividual ;
+                    rdfs:label "Epoprostenol"@en .
+
+:DrugTInsulin rdf:type vocab:DrugType, owl:NamedIndividual ;
+                rdfs:label "Insulin"@en .
+
+:DrugTBendroflumethiazide rdf:type vocab:DrugType, owl:NamedIndividual ;
+                rdfs:label "Bendroflumethiazide"@en .
+
+#################################################################
+				
+### New Drugs for MGCDS test cases
+
+:DrugTNexium		rdf:type vocab:DrugType, owl:NamedIndividual;
+					rdfs:label "Nexium"@en .
+
+:DrugTAlendronate 	rdf:type vocab:DrugType, owl:NamedIndividual;
+					rdfs:label "Alendronate"@en .
+
+:DrugTRisedronate  rdf:type vocab:DrugType, owl:NamedIndividual;
+					rdfs:label "Risedronate"@en .
+					
+:DrugTTeriparatide	rdf:type vocab:DrugType, owl:NamedIndividual;
+					rdfs:label "Teriparatide"@en .
+					
+:DrugTZoledronicAcid rdf:type vocab:DrugType, owl:NamedIndividual;
+					rdfs:label "Zoledronic acid"@en .
+					
+### New Drugs for MGCDS test cases (case 2)
+
+:DrugTWarfarin rdf:type vocab:DrugType, owl:NamedIndividual ;
+                rdfs:label "Warfarin"@en .
+
+:DrugTAmiodarone rdf:type vocab:DrugType, owl:NamedIndividual ;
+                rdfs:label "Amiodarone"@en .
+
+:DrugTPropafenone rdf:type vocab:DrugType, owl:NamedIndividual ;
+                rdfs:label "Propafenone"@en .
+
+:DrugTDiltiazem rdf:type vocab:DrugType, owl:NamedIndividual ;
+                rdfs:label "Diltiazem"@en .
+
+:DrugTAcebutolol rdf:type vocab:DrugType, owl:NamedIndividual ;
+                rdfs:label "Acebutolol"@en .
+
+:DrugTApixaban rdf:type vocab:DrugType, owl:NamedIndividual ;
+                rdfs:label "Apixaban"@en .
+
+
+:DrugTFlecainide rdf:type vocab:DrugType, owl:NamedIndividual ;
+                rdfs:label "Flecainide"@en .
+				
+:DrugTDronedarone rdf:type vocab:DrugType, owl:NamedIndividual ;
+                rdfs:label "Dronedarone"@en .
+				
+:DrugTDigoxin rdf:type vocab:DrugType, owl:NamedIndividual ;
+                rdfs:label "Digoxin"@en .
+				
+:DrugTAmlodipine rdf:type vocab:DrugType, owl:NamedIndividual ;
+                rdfs:label "Amlodipine"@en .
+				
+:DrugTChlorthalidone rdf:type vocab:DrugType, owl:NamedIndividual ;
+                rdfs:label "Chlorthalidone"@en .
+				
+:DrugTCapoten rdf:type vocab:DrugType, owl:NamedIndividual ;
+                rdfs:label "Capoten"@en .
+				
+:DrugTCalciumAcetate rdf:type vocab:DrugType, owl:NamedIndividual ;
+                rdfs:label "Calcium Acetate"@en .
+				
+:DrugTEpoetinAlfa rdf:type vocab:DrugType, owl:NamedIndividual ;
+                rdfs:label "Epoetin Alfa"@en .
+
+### Drug Categories
+
+:DrugCatNSAID rdf:type vocab:DrugType, owl:NamedIndividual ;
+                 rdfs:label "NSAID"@en ;
+#                vocab:subsumes :DrugTAspirin ,
+#                            :DrugTIbuprofen .
+                 vocab:hasGroupingCriteria :SitNonSteroidalDrug, :TrAntinflammatory.
+
+:SitNonSteroidalDrug rdf:type vocab:SituationType, owl:NamedIndividual ;
+                rdfs:label     "Drug Type is non steroidal"@en .
+
+:DrugCatNonSteroidal rdf:type vocab:DrugType, owl:NamedIndividual ;
+                rdfs:label "Non-Steroidal Drug Type"@en ;
+                #vocab:subsumes :DrugCatNSAID ;
+                vocab:hasGroupingCriteria :SitNonSteroidalDrug .
+
+:DrugCatAntiInflammatory rdf:type vocab:DrugType, owl:NamedIndividual ;
+                rdfs:label "Anti-inflammantory"@en ;
+                #vocab:subsumes :DrugCatNSAID ;
+                vocab:hasGroupingCriteria :TrAntinflammatory .
+
+#Josip: See for now how it works without the change of grouping criteria
+:DrugCatPPI rdf:type vocab:DrugType, owl:NamedIndividual ;
+                rdfs:label "PPI"@en .
+#                vocab:subsumes ...
+#                vocab:hasGroupingCriteria :SitLowRiskGIB, :TrDecreaseRiskGIB
+
+:DrugCatThiazide rdf:type vocab:DrugType, owl:NamedIndividual ;
+                rdfs:label "Thiazide"@en .
+#                vocab:subsumes ...
+#                vocab:hasGroupingCriteria ????
+
+:DrugCatDiuretic rdf:type vocab:DrugType, owl:NamedIndividual ;
+                 rdfs:label "Diuretic"@en .
+#                 vocab:subsumes :DrugCatThiazide .
+#                vocab:hasGroupingCriteria ...
+
+:DrugCatAntiBacterialAgent rdf:type vocab:DrugType, owl:NamedIndividual ;
+        rdfs:label "Anti-bacterial Agent"@en .
+#        vocab:subsumes ...
+#        vocab:hasGroupingCriteria ...
+
+:DrugCatPlateletAggregationInhibitor rdf:type vocab:DrugType, owl:NamedIndividual ;
+                                    rdfs:label "Platelet Aggregation Inhibitor"@en ;
+#                                   vocab:subssumes ...
+                                    vocab:hasGroupingCriteria :TrDecreaseBC.
+
+:DrugCatAnalgesic rdf:type vocab:DrugType, owl:NamedIndividual;
+        rdfs:label "Analgesic"@en ;
+#                vocab:subsumes ...
+        vocab:hasGroupingCriteria :TrPainkiller.
+
+#check it
+:DrugCatAntiHypertensiveAgent rdf:type vocab:DrugType, owl:NamedIndividual ;
+        rdfs:label "Anti Hypertensive"@en ;
+        #                vocab:subsumes ...
+        vocab:hasGroupingCriteria :TrDecreaseBP. ## ??
+
+### New Drug categories for MGCDS test cases (case 2)
+
+:DrugCatACEInhibitor rdf:type vocab:DrugType, owl:NamedIndividual ;
+					rdfs:label "ACE Inhibitor"@en .
+					#vocab:hasGroupingCriteria :SitHypertension .
+
+:DrugCatBB rdf:type vocab:DrugType, owl:NamedIndividual ;
+					rdfs:label "Beta Blocker"@en .
+					#vocab:hasGroupingCriteria :TrDecreaseBP .
+
+
+
+#################################################################
+#
+#    General axioms
+#
+#################################################################
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :ActAdministerAspirin
+                        :ActAdministerClopidogrel
+                        :ActAdministerDipyridamole
+                        :ActAdministerThiazide
+                        :ActAdministerTramadol
+                        :ActAdministerPPI
+                        :ActAdministerIbuprofen
+                        :ActAdministerInsulin
+                        :ActAdministerNSAID
+                        :ActEradicationTherapy
+						:ActAdministerNexium
+						:ActAdministerAlendronate
+						:ActAdministerRisedronate
+						:ActAdministerTeriparatide
+						:ActAdministerZoledronicAcid
+						:ActAdministerWarfarin
+						:ActAdministerAmiodarone
+						:ActAdministerPropafenone
+						:ActAdministerDiltiazem #Replace with amlodipine 
+						:ActAdministerAcebutolol
+						:ActAdministerACEInhibitor
+						:ActAdministerBB
+						:ActAdministerApixaban
+						:ActAdministerFlecainide
+						:ActAdministerDronedarone
+						:ActAdministerDigoxin
+						:ActAdministerAmlodipine
+						:ActAdministerChlorthalidone
+						:ActAdministerCapoten
+						:ActAdministerCalciumAcetate
+						:ActAdministerEpoetinAlfa
+                      )
+] .
+[ rdf:type owl:AllDifferent ;
+owl:distinctMembers ( :DrugTAspirin
+                      :DrugTClopidogrel
+                      :DrugTDipyridamole
+                      :DrugCatThiazide
+                      :DrugTTramadol
+                      :DrugCatPPI
+                      :DrugCatNSAID
+                      :DrugTIbuprofen
+                      :DrugTInsulin
+					  :DrugTNexium
+					  :DrugTAlendronate
+					  :DrugTRisedronate
+					  :DrugTTeriparatide
+					  :DrugTZoledronicAcid
+					  :DrugTWarfarin
+					  :DrugTAmiodarone
+					  :DrugTPropafenone
+					  :DrugTDiltiazem
+					  :DrugTAcebutolol
+					  :DrugTApixaban
+					  :DrugTFlecainide
+					  :DrugTDronedarone
+					  :DrugTDigoxin
+					  :DrugTAmlodipine
+					  :DrugTChlorthalidone
+					  :DrugTCapoten
+					  :DrugTCalciumAcetate
+					  :DrugTEpoetinAlfa
+                      :DrugCatDiuretic
+                      :DrugCatAntiBacterialAgent
+                      :DrugCatPlateletAggregationInhibitor
+                      :DrugCatAnalgesic
+                      :DrugCatAntiHypertensiveAgent
+					  :DrugCatACEInhibitor
+					  :DrugCatBB
+)
+] .
