@@ -164,16 +164,16 @@ def main():
     GuidelineText = tk.Entry(master=window, text="")
     GuidelineText.pack()
 
-    ActionLabel = tk.Label(master=window, text="Action name (AspirinGIB)")
+    ActionLabel = tk.Label(master=window, text="Causation Belief name (AspirinGIB)")
     ActionLabel.pack()
 
     ActionText = tk.Entry(master=window, text="")
     ActionText.pack()
 
-    shouldPursueR1 = tk.Radiobutton(window, text="should", variable=pursue, value="should")
+    shouldPursueR1 = tk.Radiobutton(window, text="should pursue", variable=pursue, value="should")
     shouldPursueR1.pack()
 
-    shouldPursueR2 = tk.Radiobutton(window, text="should-not", variable=pursue, value="should-not")
+    shouldPursueR2 = tk.Radiobutton(window, text="should-not pursue", variable=pursue, value="should-not")
     shouldPursueR2.pack()
 
     labeltype = tk.Label(master=window, text="Is Guideline Merged or Singular?")
@@ -192,10 +192,10 @@ def main():
     textdrug.pack()
 
 
-    drugTr = tk.Radiobutton(window, text="T", variable=drugType, value="T")
+    drugTr = tk.Radiobutton(window, text="Type (Aspirin)", variable=drugType, value="T")
     drugTr.pack()
 
-    drugTr2 = tk.Radiobutton(window, text="Cat", variable=drugType, value="Cat")
+    drugTr2 = tk.Radiobutton(window, text="Category (NSAID)", variable=drugType, value="Cat")
     drugTr2.pack()
 
     #
