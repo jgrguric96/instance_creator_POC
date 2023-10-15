@@ -5,6 +5,7 @@ As a POC it is not meant to be used as a go-to solution for creating new instanc
 For ease-of-use the TKinter library is used to create a window from which a new guideline and all its dependencies are added.
 
 ## General instructions:
+To run the code one should run the python file: "GuidelineAddingTool.py".
 
 The values between point 6-10 and 15-16 are not mandatory but they do help with connecting the drugs used with external sources.
 The helper tool requires a few bits of information to properly function:
